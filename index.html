@@ -6,29 +6,50 @@
     <title>igorashka - Moje Filmy</title>
     <style>
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #121212;
             color: #ffffff;
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #1f1f1f;
+            width: 100%;
+            padding: 20px 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
         h1 {
-            color: #ff0000;
-            margin-bottom: 30px;
+            margin: 0;
+            font-size: 2.5rem;
+            color: #ff4757;
+        }
+        p.subtitle {
+            color: #a4b0be;
+            margin: 5px 0 0 0;
+        }
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: 40px 0;
         }
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 30px;
         }
         .video-card {
-            background-color: #1e1e1e;
-            border-radius: 8px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-5px);
         }
         .video-wrapper {
             position: relative;
@@ -41,51 +62,104 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: 0;
+            border: none;
         }
         .video-info {
             padding: 15px;
-            text-align: left;
         }
         .video-title {
-            font-size: 16px;
+            font-size: 1.1rem;
             font-weight: bold;
-            margin: 0;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            color: #747d8c;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-    <h1>igorashka - Archiwum Filmów</h1>
+    <header>
+        <h1>igorashka</h1>
+        <p class="subtitle">I like the isaac and cs2... i nie tylko!</p>
+    </header>
 
-    <div class="video-grid">
-        <div class="video-card">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/4Yy_tzXeqs0" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <p class="video-title">Minecraft Speedrun (world record)</p>
-            </div>
-        </div>
+    <div class="container">
+        <div class="video-grid">
 
-        <div class="video-card">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/Crsz2Rxwyxg&t=54s" allowfullscreen></iframe>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/QSD-uPH2y-0" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">portal 1 gameplay (całość)</div>
+                </div>
             </div>
-            <div class="video-info">
-                <p class="video-title">very haigh kuality cs 2 vido</p>
-            </div>
-        </div>
 
-        <div class="video-card">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/v5KspvBi_v4&t=210s" allowfullscreen></iframe>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Z0XFv9B-G18" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">trying to beat minecraft with the jenny mod</div>
+                </div>
             </div>
-            <div class="video-info">
-                <p class="video-title">The isaac pro gameplay</p>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Iq8h_360Hks" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">random azazel gameplay</div>
+                </div>
             </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Xq_N2V376vE" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Minecraft Speedrun (world record)</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Mv0L6E1E4C8" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">very high quality cs 2 vido</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/p1n5zY8B3wQ" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">Steam tutorial</div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/uG6H8V5C5E0" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <div class="video-title">The isaac pro gameplay</div>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <footer>
+        &copy; 2026 igorashka. Wszystkie prawa zastrzeżone.
+    </footer>
 
 </body>
 </html>
